@@ -1,4 +1,4 @@
-Checks: '-*,clang-analyzer-*,cppcoreguidelines-*,-cppcoreguidelines-avoid-magic-numbers,-cppcoreguidelines-pro-bounds-constant-array-index,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,bugprone-*,-bugprone-easily-swappable-parameters,modernize-*,-modernize-use-trailing-return-type,performance-*,openmp-*,readability-identifier-naming,misc-assert-side-effect,readability-container-size-empty'
+Checks: '-*,clang-analyzer-*,cppcoreguidelines-*,-cppcoreguidelines-avoid-magic-numbers,-cppcoreguidelines-pro-bounds-constant-array-index,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,bugprone-*,-bugprone-easily-swappable-parameters,modernize-*,-modernize-use-trailing-return-type,performance-*,openmp-*,misc-assert-side-effect,readability-container-size-empty'
 CheckOptions:
   - key: readability-identifier-naming.TypedefCase
     value: CamelCase

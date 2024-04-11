@@ -2,7 +2,6 @@
 #include "CLI11.h"
 #include "HeatGeo.h"
 #include "obj.h"
-#include "vtk.h"
 #include "VTKwriter.h"
 
 int main(int argc, char **argv) {
@@ -34,9 +33,8 @@ int main(int argc, char **argv) {
         return 0;
     }
 
-    // std::vector<double> val(V.rows(), 0);
-    HeatGeo heat(V, F, 0);
-    heat.compute_geodesics();
+    HeatGeo heat(V, F);
+    // heat.compute_geodesics();
     auto val = heat.write_geodesics();
     VTKwriter writer(output.c_str(), V, val);
     bool output_file_status = writer.file_status();
@@ -45,6 +43,26 @@ int main(int argc, char **argv) {
         return 0;
     }
     writer.write_colored_points();
+
+    // Eigen::SparseMatrix<double,Eigen::RowMajor> Test(2, 3);
+    // Test.insert(0, 1) = 34;
+    // Test.insert(1, 2) = 56;
+    // using std::cout;
+    // for (int k = 0; k < Test.outerSize(); ++k){
+    //     for (Eigen::SparseMatrix<double,Eigen::RowMajor>::InnerIterator it(Test, k); it; ++it){
+    //         cout << it.row() <<"\t";
+    //         cout << it.col() << "\t";
+    //         cout << it.value() << std::endl;
+    //     }
+    //     cout << "row: " << k << std:: endl;
+    // }
+    /*
+0       1       34
+row: 0
+1       2       56
+row: 1
+[jkwang@
+    */
 
     return 0;
 }
