@@ -18,7 +18,7 @@ set(PM_CMAKE_DIR ${PROJECT_SOURCE_DIR}/cmake)
 include(cmake/CPM.cmake)
 include(cmake/dependencies.cmake)
 
-
+find_package(Eigen3 REQUIRED)
 add_library(thirdparty INTERFACE)
 target_link_libraries(thirdparty INTERFACE
     Eigen3::Eigen fmt::fmt

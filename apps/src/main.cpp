@@ -34,7 +34,7 @@ int main(int argc, char **argv) {
     }
 
     HeatGeo heat(V, F);
-    // heat.compute_geodesics();
+    heat.compute_geodesics();
     auto val = heat.write_geodesics();
     VTKwriter writer(output.c_str(), V, val);
     bool output_file_status = writer.file_status();
