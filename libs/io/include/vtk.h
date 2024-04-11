@@ -1,9 +1,9 @@
+#ifndef VTK_H
+#define VTK_H
+
 #include <Eigen/Core>
 #include <fmt/os.h>
 #include "stdgenerator.h"
-
-#ifndef VTK_H
-#define VTK_H
 
 namespace zjucad::gauwn::io {
 

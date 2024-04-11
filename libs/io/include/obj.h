@@ -1,7 +1,7 @@
-#include <Eigen/Core>
-
 #ifndef OBJ_H
 #define OBJ_H
+
+#include <Eigen/Core>
 
 namespace zjucad::gauwn::io {
     bool read_obj2d(const std::string &filepath, Eigen::MatrixXd &V, Eigen::MatrixXi &L);

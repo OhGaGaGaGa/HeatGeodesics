@@ -8,6 +8,6 @@ target_link_libraries(${PROJECT_NAME} PUBLIC
     thirdparty
 )
 
-# target_sources(${PROJECT_NAME} PUBLIC
-#     src/main.cpp
-# )
+target_sources(${PROJECT_NAME} PUBLIC
+    src/HeatGeo.cpp
+)
